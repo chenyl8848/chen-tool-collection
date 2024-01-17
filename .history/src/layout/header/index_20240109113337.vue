@@ -1,0 +1,24 @@
+<script lang="ts" setup>
+import { h } from 'vue';
+import {
+  HomeOutlined,
+  GithubOutlined,
+  WechatOutlined,
+  InfoCircleOutlined,
+  HeartTwoTone
+} from '@ant-design/icons-vue';
+</script>
+
+<template>
+  <div>
+    <home-outlined />
+    <a-input-search v-model:value="value" placeholder="input search text" style="width: 200px" @search="onSearch" />
+    <github-outlined />
+    <wechat-outlined />
+    <info-circle-outlined />
+    <heart-two-tone />
+    <a-button :icon="h(SearchOutlined)" href="https://www.google.com" />
+  </div>
+</template>
+  
+  
