@@ -6,10 +6,10 @@ import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: 'chen-tool-collection',
-  build: {
-    outDir: 'docs'
-  },
+  // base: 'chen-tool-collection',
+  // build: {
+  //   outDir: 'docs'
+  // },
   plugins: [
     vue(),
     Components({
