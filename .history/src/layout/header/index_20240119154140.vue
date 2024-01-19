@@ -19,10 +19,6 @@ const goGithub = () => {
   window.open('https://github.com/chenyl8848/chen-tool-collection')
 }
 
-const goWechat = () => {
-  window.open('https://chen-coding.oss-cn-shenzhen.aliyuncs.com/%E5%85%AC%E4%BC%97%E5%8F%B7.png')
-}
-
 const goAbout = () => {
   router.push('/about')
 }
@@ -43,15 +39,15 @@ const onSearch = () => {
         @search="onSearch" />
       <a-tooltip>
         <template #title>Github</template>
-        <github-outlined class="icon" @click="goGithub()" />
+        <github-outlined class="icon" @click="goGithub()"/>
       </a-tooltip>
       <a-tooltip>
         <template #title>微信公众号</template>
-        <wechat-outlined class="icon" @click="goWechat()" />
+        <wechat-outlined class="icon" @click="goWechat()"/>
       </a-tooltip>
       <a-tooltip>
         <template #title>关于</template>
-        <info-circle-outlined class="icon" @click="goAbout()" />
+        <info-circle-outlined class="icon" @click="goAbout()"/>
       </a-tooltip>
       <a-tooltip placement="bottomRight">
         <template #title>请作者喝一杯咖啡</template>

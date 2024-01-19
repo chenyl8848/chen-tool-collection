@@ -67,8 +67,7 @@ export const tools: Array<ToolsType> = [
             {
                 name: '富文本编辑器',
                 icon: '',
-                path: '/markdown',
-                description: '富文本编辑器'
+                path: '/markdown'
             },
 
         ]
