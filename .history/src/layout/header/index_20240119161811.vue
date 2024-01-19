@@ -39,7 +39,7 @@ const onSearch = () => {
         <template #title>主页</template>
         <home-outlined class="icon" @click="goHome()" />
       </a-tooltip>
-      <a-input-search v-model:value="searchText" placeholder="搜索工具" style="min-width: 400px" allowClear @search="onSearch" />
+      <a-input-search v-model:value="searchText" placeholder="input search text" style="min-width: 400px" allowClear @search="onSearch" />
       <a-tooltip>
         <template #title>Github</template>
         <github-outlined class="icon" @click="goGithub()" />

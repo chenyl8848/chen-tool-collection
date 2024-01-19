@@ -66,8 +66,8 @@ const open = ref<boolean>(false)
 <template>
     <a-card title="Linux 命令查询" :bordered="false">
         <p style="font-weight: bold;font-size: 18px;">请输入要查询的命令</p>
-        <a-input-search v-model:value="searchText" placeholder="ps" allowClear @search="onSearch" />
-        <p style="font-weight: bold;font-size: 18px; margin-top: 18px;">搜索结果（点击查看详情）</p>
+        <a-input-search v-model:value="searchText" placeholder="ps" @search="onSearch" />
+        <p style="font-weight: bold;font-size: 18px; margin-top: 12px;">搜索结果（点击查看详情）</p>
         <div v-for="item in searchResult" style="display: flex;">
             <a-radio-group value="a">
                 <a-radio value="a" style="margin-top: 6px;"></a-radio>
