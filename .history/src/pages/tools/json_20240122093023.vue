@@ -2,25 +2,24 @@
 import { JsonViewer } from "vue3-json-viewer"
 // if you used v1.0.5 or latster ,you should add import "vue3-json-viewer/dist/index.css"
 import "vue3-json-viewer/dist/index.css";
-import { ref } from "vue";
+import { reactive, ref } from "vue";
 import { message } from 'ant-design-vue';
 
-const jsonData = ref<string>('')
+const inputData = ref<string>('')
 
 const keyClick = (keyName: string) => {
     console.log(keyName, "被点击了")
 }
     
-// let data = reactive({})
-let data = ref('')
+const data = reactive({})
 
 const plainOptions = ['普通', '暗黑']
 const theme = ref<string>('普通')
 
 const parseJson = () => {
-    if (jsonData.value) {
+    if (inputData.value) {
         try {
-            data.value = JSON.parse(jsonData.value)
+            return JSON.parse(inputData.value)
         } catch (error) {
             message.error('请输入正确的 JSON 串');
         }
@@ -39,7 +38,7 @@ const parseJson = () => {
             <!-- <a href="#">格式化</a> -->
             <a-button type="link" @click="parseJson()">格式化</a-button>
         </template>
-        <a-textarea v-model:value="jsonData" show-count style="height: 200px;"/>
+        <a-textarea v-model:value="inputData" show-count style="height: 200px;" />
         <a-space direction="vertical" style="margin-top: 8px; margin-bottom: 8px;">
             <a-radio-group v-model:value="theme" :options="plainOptions" />
         </a-space>

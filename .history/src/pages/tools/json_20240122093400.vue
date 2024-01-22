@@ -2,7 +2,7 @@
 import { JsonViewer } from "vue3-json-viewer"
 // if you used v1.0.5 or latster ,you should add import "vue3-json-viewer/dist/index.css"
 import "vue3-json-viewer/dist/index.css";
-import { ref } from "vue";
+import { reactive, ref } from "vue";
 import { message } from 'ant-design-vue';
 
 const jsonData = ref<string>('')
@@ -39,7 +39,7 @@ const parseJson = () => {
             <!-- <a href="#">格式化</a> -->
             <a-button type="link" @click="parseJson()">格式化</a-button>
         </template>
-        <a-textarea v-model:value="jsonData" show-count style="height: 200px;"/>
+        <a-textarea v-model:value="jsonData" show-count style="height: 200px;" />
         <a-space direction="vertical" style="margin-top: 8px; margin-bottom: 8px;">
             <a-radio-group v-model:value="theme" :options="plainOptions" />
         </a-space>
