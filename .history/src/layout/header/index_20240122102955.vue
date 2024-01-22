@@ -63,12 +63,12 @@ const isDark = useDark({
   }
 })
 
-const changeTheme = () => {
-  theme.value = !theme.value
-  // isDark
-}
+// const changeTheme = () => {
+//   theme.value = !theme.value
+//   isDark
+// }
 
-// const changeTheme = useToggle(isDark)
+const changeTheme = useToggle(isDark)
 
 const onSearch = () => {
   console.log('onSearchhhhhhhhhhhh')

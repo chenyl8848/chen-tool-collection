@@ -51,22 +51,22 @@ const isDark = useDark({
       html.setAttribute('data-doc-theme', 'dark');
       html.style.colorScheme = "dark";
       link.href = "/style/antd.dark.css";
-      theme.value = !theme.value
+      theme.value = true
 
     } else {
       document.body.setAttribute("data-theme", "light")
       html.setAttribute('data-doc-theme', 'light');
       html.style.colorScheme = "light";
       link.href = "";
-      theme.value = !theme.value
+      theme.value = false
     }
   }
 })
 
-const changeTheme = () => {
-  theme.value = !theme.value
-  // isDark
-}
+// const changeTheme = () => {
+//   theme.value = !theme.value
+//   isDark
+// }
 
 // const changeTheme = useToggle(isDark)
 
